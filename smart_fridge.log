@@ -1,0 +1,102 @@
+2025-11-09 11:59:39,357 - root - ERROR - Error in database setup: Failed to establish database connection: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
+Traceback (most recent call last):
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 89, in _resolve_uri
+    results = _resolve(
+              ^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 43, in _resolve
+    return resolver.resolve(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\dns\resolver.py", line 1368, in resolve
+    return get_default_resolver().resolve(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\dns\resolver.py", line 1190, in resolve
+    (request, answer) = resolution.next_request()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\dns\resolver.py", line 691, in next_request
+    raise NXDOMAIN(qnames=self.qnames_to_try, responses=self.nxdomain_responses)
+dns.resolver.NXDOMAIN: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\database.py", line 51, in connect
+    self._client = self._factory()
+                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\main.py", line 31, in create_connection
+    return pymongo.MongoClient(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 736, in __init__
+    res = uri_parser.parse_uri(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\uri_parser.py", line 542, in parse_uri
+    nodes = dns_resolver.get_hosts()
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 121, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 101, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\main.py", line 43, in _setup_database
+    self.database.connect()
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\database.py", line 59, in connect
+    raise DatabaseConnectionError(f"Failed to establish database connection: {e}")
+database.DatabaseConnectionError: Failed to establish database connection: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
+2025-11-09 11:59:44,754 - root - ERROR - Error in database setup: Failed to establish database connection: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
+Traceback (most recent call last):
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 89, in _resolve_uri
+    results = _resolve(
+              ^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 43, in _resolve
+    return resolver.resolve(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\dns\resolver.py", line 1368, in resolve
+    return get_default_resolver().resolve(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\dns\resolver.py", line 1190, in resolve
+    (request, answer) = resolution.next_request()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\dns\resolver.py", line 691, in next_request
+    raise NXDOMAIN(qnames=self.qnames_to_try, responses=self.nxdomain_responses)
+dns.resolver.NXDOMAIN: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\database.py", line 51, in connect
+    self._client = self._factory()
+                   ^^^^^^^^^^^^^^^
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\main.py", line 31, in create_connection
+    return pymongo.MongoClient(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\mongo_client.py", line 736, in __init__
+    res = uri_parser.parse_uri(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\uri_parser.py", line 542, in parse_uri
+    nodes = dns_resolver.get_hosts()
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 121, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 101, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shreyas\AppData\Local\Programs\Python\Python312\Lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\main.py", line 43, in _setup_database
+    self.database.connect()
+  File "c:\Users\Shreyas\OneDrive\Desktop\modules\database.py", line 59, in connect
+    raise DatabaseConnectionError(f"Failed to establish database connection: {e}")
+database.DatabaseConnectionError: Failed to establish database connection: The DNS query name does not exist: _mongodb._tcp.pbl-smart-fridge.k7mfvyj.mongodb.net.
