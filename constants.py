@@ -1,6 +1,6 @@
 # ========== GLOBAL CONSTANTS ==========
-MONGO_URI = "mongodb+srv://Smart-fridge:api123@pbl-smart-fridge.k7mfvyj.mongodb.net/?retryWrites=true&w=majority&tls=true"
-GEMINI_API_KEY = "AIzaSyBnq-zQKTtha6AxgcVZYTHOpJe-lbMY8vg"
+MONGO_URI = ""
+GEMINI_API_KEY = ""
 CACHE_DIR = "./cache"
 DEFAULT_SERVER_URL = "http://172.16.1.252:5000"
 
